@@ -1,0 +1,17 @@
+@import "../../../variables/variables.scss";
+
+.header-container{
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    .app-name{
+        color: $light;
+        padding:0px;
+        margin:0px;
+        text-shadow: 2px 0 0 $appRed, -2px 0 0 $appRed, 0 2px 0 $appRed, 0 -2px 0 $appRed, 1px 1px $appRed, -1px -1px 0 $appRed, 1px -1px 0 $appRed, -1px 1px 0 $appRed;
+    }
+    .app-logo{
+        max-height: 50px;
+    }
+}

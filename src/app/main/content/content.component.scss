@@ -1,0 +1,74 @@
+@import "../../../variables/variables.scss";
+
+.content-container{
+    display: flex;
+    height: 100%;
+    .form-container{
+        display: flex;
+        width: 50%;
+        padding: 50px;
+        .score-form{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            flex-basis: content;
+            border:1px solid $dark;
+            border-radius: 10px;
+            width: 50%;
+            padding: 30px;
+            .account-icon{
+                height: fit-content;
+                font-size: 150px;
+                color: $dark;
+                text-align: center;
+                width: 100%;
+            }
+            .form-field{
+                width: auto;
+            }
+        }
+        .score-response{
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .score-spinner{
+                max-height: 70px;
+                width: auto;
+            }
+            .score-point{
+                background-color: $appGreen;
+                padding: 20px;
+                height: 100px;
+                width: 100px;
+                border-radius: 100%;
+                font-size: bold;
+                color: $light;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 10px solid $appDarkGreen;
+                h1{
+                    padding: 0;
+                    margin:0;
+                }
+            }
+        }
+        .calculate-button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    }
+    .image-container{
+        background-image: url("../../../assets/img/background.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        width: 50%;
+        opacity: 0.7;
+        border-left: 10px solid $dark;
+    }
+}

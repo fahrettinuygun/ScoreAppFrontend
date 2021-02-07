@@ -1,0 +1,53 @@
+<div class="content-container">
+    <div class="form-container">
+        <form class="score-form" [formGroup]="scoreForm" (ngSubmit)="calculate()">
+            <mat-icon class="account-icon" aria-hidden="false">account_circle</mat-icon>
+            <mat-form-field class="id form-field">
+              <mat-label>Kimlik Numarası</mat-label>
+              <input formControlName="id" matInput placeholder="12345678910" type="number">
+            </mat-form-field>
+            <mat-form-field class="name form-field">
+              <mat-label>İsim</mat-label>
+              <input formControlName="name" matInput placeholder="Fahrettin" type="text">
+            </mat-form-field>
+            <mat-form-field class="surname form-field">
+              <mat-label>Soyisim</mat-label>
+              <input formControlName="surname" matInput placeholder="Uygun" type="text">
+            </mat-form-field>
+            <mat-form-field class="phone form-field">
+              <mat-label>Telefon</mat-label>
+              <input formControlName="phone" matInput placeholder="0555 555 55 55" type="number">
+            </mat-form-field>
+            <mat-form-field class="income form-field" appearance="fill">
+                <mat-label>Aylık Gelir Dilimi</mat-label>
+                <mat-select formControlName="income" >
+                    <mat-option *ngFor="let income of incomeList" [value]="income.value">
+                    {{income.key}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="income form-field" appearance="fill">
+                  <mat-label>İkamet İli</mat-label>
+                  <mat-select formControlName="city" >
+                    <mat-option *ngFor="let city of cities" [value]="city.value">
+                      {{city.key}}
+                    </mat-option>
+                  </mat-select>
+            </mat-form-field>
+            <div class="calculate-button">
+                <button mat-raised-button color="primary" type="submit" *ngIf="!scorePoint">Skor Hesapla</button>
+                <button mat-raised-button color="primary" type="reset" *ngIf="scorePoint" (click)="clear()">Temizle</button>
+            </div>
+        </form>
+        <div class="score-response">
+            <div *ngIf="searching" class="score-spinner">
+                <mat-spinner></mat-spinner>
+            </div>
+            <div class="score-point" *ngIf="scorePoint">
+                <h1>{{scorePoint}}</h1>
+            </div>
+        </div>
+    </div>
+    <div class="image-container">
+    </div>
+</div>

@@ -1,0 +1,30 @@
+@import "../../variables/variables.scss";
+
+.main-container{
+    padding: 0px;
+    margin:0px;
+    display: flex;
+    height: 100vh;
+    .left-menu{
+        background-color: $dark;
+        flex:1;
+    }
+    .main-page{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex:11;
+        .header{
+            flex:1;
+            background-color: $appColor;
+        }
+        .content{
+            flex:10;
+            background-color: $light;
+        }
+        .footer{
+            flex:1;
+            background-color: $appColor;
+        }
+    }
+}
